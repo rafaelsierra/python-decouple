@@ -137,7 +137,7 @@ class RepositoryConsul(RepositoryEmpty):
         if not data:
             return False
         else:
-            self.data[key] = data.get('Value', None)
+            self.data[key] = data.get('Value', None).decode()
             return True
 
     def __getitem__(self, key):
